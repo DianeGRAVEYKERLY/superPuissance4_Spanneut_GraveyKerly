@@ -16,6 +16,7 @@ public class CelluleDeGrille {
     public CelluleDeGrille(Jeton jeton, boolean TrouNoir, boolean Desintegrateur){ 
         jetonCourant=jeton;
         
+        
         TrouNoir = false;
         Desintegrateur = false;
         
@@ -45,10 +46,11 @@ public class CelluleDeGrille {
         
     }
     
-    private boolean avoirTrouNoir;
     
+    private boolean avoirTrouNoir; //2ème attribut 
     
     public void placerTrouNoir(){
+        avoirTrouNoir = true;
         
     }
     

@@ -9,5 +9,7 @@ package superpuissance4;
  * @author dia12
  */
 public class Partie {
-    
+    ùmlkjhgfddddd
+            jjjj
+            jjjj
 }

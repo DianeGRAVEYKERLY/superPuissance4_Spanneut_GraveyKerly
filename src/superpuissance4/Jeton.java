@@ -9,6 +9,31 @@ package superpuissance4;
  * @author dia12
  */
 public class Jeton {
+    String couleur;
+   
+      private Jeton( String c){
+            c=couleur;
+      
     
     
+} 
+      Public void lireCouleur()  {
+ System.out.print(couleur);
+ 
+
+}
+
+@Override                        
+public String toString() {     // affichage de R ou J selon le choix de la couleur 
+String chaine_a_retourner;
+chaine_a_retourner = couleur;
+if (couleur=="rouge")
+         return ("R");
+else return ("J");
+
+
+
+}
+
+
 }

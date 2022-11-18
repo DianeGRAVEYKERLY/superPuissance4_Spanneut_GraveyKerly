@@ -14,6 +14,8 @@ public class Superpuissance4 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Jeton PremierJeton = new Jeton("rouge");
+        PremierJeton.lireCouleur();
         
         
         // TODO code application logic here

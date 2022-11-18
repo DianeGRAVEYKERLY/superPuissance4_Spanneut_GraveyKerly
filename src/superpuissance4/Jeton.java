@@ -9,16 +9,20 @@ package superpuissance4;
  * @author dia12
  */
 public class Jeton {
-    String couleur;
+    private String couleur;
    
-      private Jeton( String c){
-            c=couleur;
+      public Jeton( String c){
+            couleur=c;
       
     
     
 } 
-      Public void lireCouleur()  {
- System.out.print(couleur);
+      public String lireCouleur(){
+          
+ System.out.print(couleur)  ;       
+         
+
+return (couleur);
  
 
 }

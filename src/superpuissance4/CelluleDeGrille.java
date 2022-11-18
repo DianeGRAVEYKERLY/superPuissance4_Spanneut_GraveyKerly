@@ -30,14 +30,29 @@ public class CelluleDeGrille {
     public boolean presenceJeton(){
         if (jetonCourant != null){
             return true;
+        }else{
+            return false;
         }
         
     }
     
-    public void lireCouleurDuJeton(){
+    public String lireCouleurDuJeton(){
+        if (jetonCourant != null){
+            return jetonCourant.lireCouleur();
+        }else{
+            return "vide";
+        }
         
     }
     
     private boolean avoirTrouNoir;
+    
+    
+    public void placerTrouNoir(){
+        
+    }
+    
+    
+    
     private boolean avoirDesintegrateur;
 }

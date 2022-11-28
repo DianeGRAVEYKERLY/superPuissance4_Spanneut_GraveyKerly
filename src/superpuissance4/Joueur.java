@@ -28,9 +28,23 @@ public class Joueur {
           
       }
       public int nombreDeJetons (){
-          return (ReserveJeton.size);
+          return (ReserveJeton.size());
       }
       
-            
-            
+      public void AjouterJeton   (Jeton j){
+        ReserveJeton.add(j); 
+        
+      } 
+      
+      public Jeton jouerJeton(){
+      Jeton JetonRetourne=ReserveJeton.remove(0);
+         return (JetonRetourne) ;  
+                 }
+      public void obtenirDesintegrateur(){
+          NombreDesintegrateurs+=1;
+      }
+      public void utiliserDesintegrateur(){
+          NombreDesintegrateurs-=1;
+          
+      }
 }

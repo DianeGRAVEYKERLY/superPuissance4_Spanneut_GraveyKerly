@@ -11,15 +11,18 @@ package superpuissance4;
 public class Jeton {
     private String couleur;
    
-       Jeton( String c){
-            c=couleur;
+      public Jeton( String c){
+            couleur=c;
       
     
     
 } 
-      public String lireCouleur()  {
- System.out.print(couleur);
- return (couleur);
+      public String lireCouleur(){
+          
+ System.out.print(couleur)  ;       
+         
+
+return (couleur);
  
 
 }

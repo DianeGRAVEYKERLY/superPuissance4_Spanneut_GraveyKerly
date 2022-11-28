@@ -91,4 +91,19 @@ public class CelluleDeGrille {
             return false;
         }
     }
+    
+    public void placerDesintegrateur() { //ajout d'un désintégrateur 
+        avoirDesintegrateur = true;
+    }
+    
+    public void supprimerDesintegrateur () { //suppression d'un désintégrateur 
+        avoirDesintegrateur = false; 
+    }
+    
+    public void activerTrouNoir(){
+        activerTrouNoir.supprimerTrouNoir();
+        activerTrouNoir.supprimerDesintegrateur();
+    }
+    
+    
 }

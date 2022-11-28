@@ -19,7 +19,11 @@ public class PlateauDeJeu {
             
         }
         
+        
        
+        
+    }
+    public void ajouterJetonDansColonne(Jeton j, int i){
         
     }
     }

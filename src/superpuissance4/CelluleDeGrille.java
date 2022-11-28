@@ -36,6 +36,11 @@ public class CelluleDeGrille {
         }
         
     }
+
+    public void affecterJeton(Jeton jetonCourant) { //accesseur pour ajouter le jeton en paramètre à la cellule 
+        this.jetonCourant = jetonCourant;
+    }
+    
     
     public String lireCouleurDuJeton(){
         if (jetonCourant != null){
@@ -49,12 +54,41 @@ public class CelluleDeGrille {
     
     private boolean avoirTrouNoir; //2ème attribut 
     
-    public void placerTrouNoir(){
+    public void placerTrouNoir(){ //ajout trou noir
         avoirTrouNoir = true;
         
     }
     
+    public void supprimerTrouNoir() { //suppression trou noir 
+        avoirTrouNoir = false;
+    }
     
+    public boolean presenceTrouNoir() { //savoir si un trou noir est présent 
+        if(avoirTrouNoir == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
     
-    private boolean avoirDesintegrateur;
+    public Jeton recupererJeton(){ //on récupère le jeton dans la grille 
+        Jeton jetontemporaire;
+        jetontemporaire = jetonCourant;
+        jetonCourant = null;
+        return jetontemporaire;
+    }
+    
+    private boolean avoirDesintegrateur; //3ème attribut
+    
+    public void supprimerJeton() { //suppression du jeton (trou noir ou désintégrateur)
+        jetonCourant = null;
+    }
+    
+    public boolean presenceDesintegrateur(){ //savoir si un désintégrateur est présent 
+        if (avoirDesintegrateur == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

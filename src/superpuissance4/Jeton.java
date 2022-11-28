@@ -17,6 +17,10 @@ public class Jeton {
     
     
 } 
+
+    public void setCouleur(String couleur) {
+        this.couleur = couleur;
+    }
       public String lireCouleur(){
           
  System.out.print(couleur)  ;       

@@ -14,7 +14,7 @@ public class Superpuissance4 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Jeton PremierJeton = new Jeton("rouge");
+        Jeton PremierJeton = new Jeton("rouge");  // TEST POUR VOIR SI JETON MARCHE 
         PremierJeton.lireCouleur();
         
         

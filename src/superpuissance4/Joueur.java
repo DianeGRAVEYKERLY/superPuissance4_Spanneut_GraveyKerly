@@ -4,10 +4,33 @@
  */
 package superpuissance4;
 
+import java.util.ArrayList;
+
+
 /**
  *
  * @author dia12
  */
 public class Joueur {
-    
+    private String couleur;
+    private String nom;
+    private ArrayList<Jeton> ReserveJeton= new ArrayList<Jeton>(); 
+    private int NombreDesintegrateurs;
+      public Joueur(  int ND,String n){
+            NombreDesintegrateurs=0;
+            n=nom;
+            ND=NombreDesintegrateurs;
+      }
+            
+      public void AffecterCouleur (String couleur) {
+          if (couleur=="rouge" || couleur=="jaune") {
+          this.couleur=couleur; }
+          
+      }
+      public int nombreDeJetons (){
+          return (ReserveJeton.size);
+      }
+      
+            
+            
 }

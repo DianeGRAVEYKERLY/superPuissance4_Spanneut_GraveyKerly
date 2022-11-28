@@ -101,9 +101,27 @@ public class CelluleDeGrille {
     }
     
     public void activerTrouNoir(){
-        activerTrouNoir.supprimerTrouNoir();
-        activerTrouNoir.supprimerDesintegrateur();
+        supprimerTrouNoir();
+        supprimerJeton();
     }
     
+    //@Override
+    public String toString() { //identifier ce qui est dans la cellule 
+                
+        if (jetonCourant != null){
+            return jetonCourant.toString();
+        }
+        if (avoirTrouNoir == true){
+            System.out.print("@");
+            
+        }
+        if (avoirDesintegrateur == true){
+            System.out.print("D");
+        }
+        if (jetonCourant == null & avoirTrouNoir==false & avoirDesintegrateur == false){
+            System.out.print(".");   
+        }
+       return toString(); 
+    }
     
 }

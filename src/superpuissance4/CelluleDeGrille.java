@@ -9,22 +9,18 @@ package superpuissance4;
  * @author dia12
  */
 public class CelluleDeGrille {
-    private Jeton jetonCourant; //premier attribut 
+    private Jeton jetonCourant; //premier attribut
+    private boolean avoirTrouNoir; //2ème attribut
+    private boolean avoirDesintegrateur; //3ème attribut
 
     
-    //constructeur 
-    public CelluleDeGrille(Jeton jeton, boolean TrouNoir, boolean Desintegrateur){ 
-        jetonCourant=jeton;
-        
-        
-        TrouNoir = false;
-        Desintegrateur = false;
-        
-    } 
     
     //jetoncourant devient null
     public void Celluledegrille(){
         jetonCourant = null;
+        avoirTrouNoir = false;
+        avoirDesintegrateur = false;
+        
     }
     
     // methode pour tester si le jeton est présent ou non 
@@ -51,8 +47,7 @@ public class CelluleDeGrille {
         
     }
     
-    
-    private boolean avoirTrouNoir; //2ème attribut 
+ 
     
     public void placerTrouNoir(){ //ajout trou noir
         avoirTrouNoir = true;
@@ -78,7 +73,7 @@ public class CelluleDeGrille {
         return jetontemporaire;
     }
     
-    private boolean avoirDesintegrateur; //3ème attribut
+    
     
     public void supprimerJeton() { //suppression du jeton (trou noir ou désintégrateur)
         jetonCourant = null;

@@ -11,21 +11,31 @@ package superpuissance4;
 public class PlateauDeJeu {
     CelluleDeGrille[][] grille = new CelluleDeGrille [6][7];
     public PlateauDeJeu (){
-        for (int i=0;i<8;i++){
-            for(int j=0; j<7;j++){
+        for (int i=0;i<7;i++){
+            for(int j=0; j<6;j++){
                grille[i][j] = new CelluleDeGrille();
             }
         
             
         }
         
-       
+        
         
     }
     
+    
     public int ajouterJetonDansColonne(Jeton notre_jeton, int colonne){
+        for (int i=0; i<7; i++){
+            if (grille[i][colonne].presenceJeton()== false){
+                grille[i][colonne].affecterJeton(notre_jeton);
+                return i;
+            }
+            
+        }
         
+return -1;
     }
+    
     
     public boolean grilleRemplie(){
         int compteur = 0;
@@ -44,6 +54,11 @@ public class PlateauDeJeu {
         }
          
     }
+
+    public String afficherGrilleSurConsole() {
+        return "PlateauDeJeu{" + "grille=" + grille + '}'; //methode to string
+    }
+    
     
     public boolean presenceJeton(int x, int y){
         if (grille[x][y] != null){ //on regarde si la cellule est vide ou pas 
@@ -61,8 +76,17 @@ public class PlateauDeJeu {
     public boolean etreGagnantePourCouleur(String couleur){
         
         public boolean ligneGagnantePourCouleur(String couleur){
-            
-            
+            for (int i=0;i<4;i++){
+                for(int j=0; j<6;j++){
+                    if (grille[i][j].lireCouleurDuJeton()==grille[i+1][j].lireCouleurDuJeton()){
+                        if(grille[i+1][j].lireCouleurDuJeton()==grille[i+2][j].lireCouleurDuJeton()){
+                            if (grille[i+2][j].lireCouleurDuJeton()==grille[i+3][j].lireCouleurDuJeton()){
+                                return true;
+                            }
+                        }
+                    }
+                }     
+            } 
         }
         
         public boolean colonneGagnantePourCouleur(String couleur){
@@ -81,6 +105,10 @@ public class PlateauDeJeu {
         
         
     }
+
+public void tasserColonne(int j){
+
+}
     
 }
 

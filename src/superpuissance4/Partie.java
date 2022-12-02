@@ -17,7 +17,7 @@ public class Partie {
       public void Partie (Joueur joueur1, Joueur joueur2){
           listeJoueurs[0]=joueur1;
           joueur2=listeJoueurs[2];
-          PlateauDeJeu plateau = new PlateauDeJeu();
+          plateau = new PlateauDeJeu();
           
 }
 public void attribuerCouleurAuxJoueurs() {
@@ -48,10 +48,20 @@ public void attribuerCouleurAuxJoueurs() {
         
     }
     public void  placerTrousNoirsEtDesintegrateurs() {
-        Random n=new Random();
-    int i = n.nextInt(2);
+        
      Random m=new Random();
-    int j = m.nextInt(2);
+    int nb = m.nextInt(42);
+    Random l=new Random();
+    int mb = l.nextInt(42);
+    
+    for (int i=1;i<3;i++){
+        for (int j=1; j<3;j++){
+          if (plateau.presenceTrouNoir(nb,mb)==true)  {
+        }
+    }
+        
+        
+        
     }
     
     

@@ -56,7 +56,9 @@ public void attribuerCouleurAuxJoueurs() {
     
     for (int i=1;i<3;i++){
         for (int j=1; j<3;j++){
-          if (plateau.presenceTrouNoir(nb,mb)==true)  {
+          if (plateau.presenceTrouNoir(nb,mb)==true && plateau.presenceDesintegrateur(nb,mb)==true)  {
+              plateau.placerTrounoir(nb,mb);
+              plateau.placerDesintegrateur(nb,mb);
         }
     }
         

@@ -17,6 +17,8 @@ public class Superpuissance4 {
         Jeton PremierJeton = new Jeton("rouge");  // TEST POUR VOIR SI JETON MARCHE 
         PremierJeton.lireCouleur();
         
+        Joueur joueur1= new Joueur("rouge","nathan", reserve<Jeton>,5);
+        
         
         // TODO code application logic here
     }

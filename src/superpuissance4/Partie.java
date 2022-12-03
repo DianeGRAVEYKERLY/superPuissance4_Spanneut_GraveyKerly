@@ -51,7 +51,7 @@ public void attribuerCouleurAuxJoueurs() {
         
      
     for (int i=0;i<3;i++){
-        for (int j=0; j<3;j++){
+        
             
         
           
@@ -64,12 +64,26 @@ public void attribuerCouleurAuxJoueurs() {
               plateau.placerTrounoir(nb,mb);
               plateau.placerDesintegrateur(nb,mb);
         }
-          
-    
-      
-        
+     
+          }
+    for(int j=0;j<2;j++){
+        Random m=new Random();
+            int nb = m.nextInt(7);
+            Random l=new Random();
+            int mb = l.nextInt(6);
+             Random f=new Random();
+            int nbr = f.nextInt(7);
+            Random h=new Random();
+            int mbr = h.nextInt(6);
+            
+      if (plateau.presenceTrouNoir(nb,mb)==true )  {
+              plateau.placerTrounoir(nb,mb);
+              
+        }
+     if (  plateau.presenceDesintegrateur(nbr,mbr)==true)  {
+         plateau.placerDesintegrateur(nbr,mbr);
+     }
     }
-      
             
     
     

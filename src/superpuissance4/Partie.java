@@ -76,11 +76,11 @@ public void attribuerCouleurAuxJoueurs() {
             Random h=new Random();
             int mbr = h.nextInt(6);
             
-      if (plateau.presenceTrouNoir(nb,mb)==true )  {
+      if (plateau.presenceTrouNoir(nb,mb)==true && plateau.presenceDesintegrateur(nb,mb)==true )  {
               plateau.placerTrounoir(nb,mb);
               
         }
-     if (  plateau.presenceDesintegrateur(nbr,mbr)==true)  {
+     if (  plateau.presenceDesintegrateur(nbr,mbr)==true &&plateau.presenceTrouNoir(nb,mb)==true)  {
          plateau.placerDesintegrateur(nbr,mbr);
      }
     }

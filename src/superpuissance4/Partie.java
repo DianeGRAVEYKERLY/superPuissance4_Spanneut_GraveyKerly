@@ -49,22 +49,28 @@ public void attribuerCouleurAuxJoueurs() {
     }
     public void  placerTrousNoirsEtDesintegrateurs() {
         
-     Random m=new Random();
-    int nb = m.nextInt(42);
-    Random l=new Random();
-    int mb = l.nextInt(42);
+     
+    for (int i=0;i<3;i++){
+        for (int j=0; j<3;j++){
+            
+        
+          
+            Random m=new Random();
+            int nb = m.nextInt(7);
+            Random l=new Random();
+            int mb = l.nextInt(6);
     
-    for (int i=1;i<3;i++){
-        for (int j=1; j<3;j++){
-          if (plateau.presenceTrouNoir(nb,mb)==true && plateau.presenceDesintegrateur(nb,mb)==true)  {
+        if (plateau.presenceTrouNoir(nb,mb)==true && plateau.presenceDesintegrateur(nb,mb)==true)  {
               plateau.placerTrounoir(nb,mb);
               plateau.placerDesintegrateur(nb,mb);
         }
+          
+    
+      
+        
     }
-        
-        
-        
-    }
+      
+            
     
     
     

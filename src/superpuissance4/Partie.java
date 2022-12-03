@@ -84,11 +84,16 @@ public void attribuerCouleurAuxJoueurs() {
          plateau.placerDesintegrateur(nbr,mbr);
      }
     }
-            
+    
     
     
     
     
     
 }
+    public void initialiserPartie(){
+        
+    }
+    
+            
 }

@@ -16,7 +16,7 @@ public class Partie {
  private PlateauDeJeu  plateau;
       public void Partie (Joueur joueur1, Joueur joueur2){
           listeJoueurs[0]=joueur1;
-          joueur2=listeJoueurs[2];
+          listeJoueurs[1]=joueur2;
           plateau = new PlateauDeJeu();
           
 }
@@ -92,7 +92,13 @@ public void attribuerCouleurAuxJoueurs() {
     
 }
     public void initialiserPartie(){
+        attribuerCouleurAuxJoueurs();
         
+        creerEtAffecterJeton(listeJoueurs[0]);
+         creerEtAffecterJeton(listeJoueurs[1]);
+         placerTrousNoirsEtDesintegrateurs() ;
+        
+         
     }
     
             

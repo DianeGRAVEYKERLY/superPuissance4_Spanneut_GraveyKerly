@@ -4,7 +4,7 @@
  */
 package superpuissance4;
 
-import java.util.Random;
+import java.util.Random;   
 
 /**
  *
@@ -101,5 +101,8 @@ public void attribuerCouleurAuxJoueurs() {
          
     }
     
-            
+      public void lancerPartie(){
+          while ((plateau.etreGagnantePourCouleur("rouge")=false) 
+                  &&(plateau.etreGagnantePourCouleur("jaune")=false )){
+      }      
 }

@@ -4,7 +4,7 @@
  */
 package superpuissance4;
 
-import java.util.Random;
+import java.util.Random;   
 
 /**
  *
@@ -16,7 +16,7 @@ public class Partie {
  private PlateauDeJeu  plateau;
       public void Partie (Joueur joueur1, Joueur joueur2){
           listeJoueurs[0]=joueur1;
-          joueur2=listeJoueurs[2];
+          listeJoueurs[1]=joueur2;
           plateau = new PlateauDeJeu();
           
 }
@@ -49,24 +49,60 @@ public void attribuerCouleurAuxJoueurs() {
     }
     public void  placerTrousNoirsEtDesintegrateurs() {
         
-     Random m=new Random();
-    int nb = m.nextInt(42);
-    Random l=new Random();
-    int mb = l.nextInt(42);
+     
+    for (int i=0;i<3;i++){
+        
+            
+        
+          
+            Random m=new Random();
+            int nb = m.nextInt(7);
+            Random l=new Random();
+            int mb = l.nextInt(6);
     
-    for (int i=1;i<3;i++){
-        for (int j=1; j<3;j++){
-          if (plateau.presenceTrouNoir(nb,mb)==true)  {
+        if (plateau.presenceTrouNoir(nb,mb)==true && plateau.presenceDesintegrateur(nb,mb)==true)  {
+              plateau.placerTrounoir(nb,mb);
+              plateau.placerDesintegrateur(nb,mb);
         }
+     
+          }
+    for(int j=0;j<2;j++){
+        Random m=new Random();
+            int nb = m.nextInt(7);
+            Random l=new Random();
+            int mb = l.nextInt(6);
+             Random f=new Random();
+            int nbr = f.nextInt(7);
+            Random h=new Random();
+            int mbr = h.nextInt(6);
+            
+      if (plateau.presenceTrouNoir(nb,mb)==true && plateau.presenceDesintegrateur(nb,mb)==true )  {
+              plateau.placerTrounoir(nb,mb);
+              
+        }
+     if (  plateau.presenceDesintegrateur(nbr,mbr)==true &&plateau.presenceTrouNoir(nb,mb)==true)  {
+         plateau.placerDesintegrateur(nbr,mbr);
+     }
     }
-        
-        
-        
-    }
+    
     
     
     
     
     
 }
+    public void initialiserPartie(){
+        attribuerCouleurAuxJoueurs();
+        
+        creerEtAffecterJeton(listeJoueurs[0]);
+         creerEtAffecterJeton(listeJoueurs[1]);
+         placerTrousNoirsEtDesintegrateurs() ;
+        
+         
+    }
+    
+      public void lancerPartie(){
+          while ((plateau.etreGagnantePourCouleur("rouge")=false) 
+                  &&(plateau.etreGagnantePourCouleur("jaune")=false )){
+      }      
 }

@@ -11,9 +11,10 @@ import java.util.Random;
  * @author dia12
  */
 public class Partie {
-  private Joueur[] listeJoueurs= new Joueur[2];
+ private Joueur[] listeJoueurs= new Joueur[2];
  private Joueur joueurcourant;
  private PlateauDeJeu  plateau;
+ 
       public void Partie (Joueur joueur1, Joueur joueur2){
           listeJoueurs[0]=joueur1;
           listeJoueurs[1]=joueur2;
@@ -60,7 +61,7 @@ public void attribuerCouleurAuxJoueurs() {
             Random l=new Random();
             int mb = l.nextInt(6);
     
-        if (plateau.presenceTrouNoir(nb,mb)==true && plateau.presenceDesintegrateur(nb,mb)==true)  {
+        if (plateau.presenceTrouNoir(nb,mb)==false && plateau.presenceDesintegrateur(nb,mb)==false)  {
               plateau.placerTrounoir(nb,mb);
               plateau.placerDesintegrateur(nb,mb);
         }
@@ -76,11 +77,11 @@ public void attribuerCouleurAuxJoueurs() {
             Random h=new Random();
             int mbr = h.nextInt(6);
             
-      if (plateau.presenceTrouNoir(nb,mb)==true && plateau.presenceDesintegrateur(nb,mb)==true )  {
+      if (plateau.presenceTrouNoir(nb,mb)==false && plateau.presenceDesintegrateur(nb,mb)==false )  {
               plateau.placerTrounoir(nb,mb);
               
         }
-     if (  plateau.presenceDesintegrateur(nbr,mbr)==true &&plateau.presenceTrouNoir(nb,mb)==true)  {
+     if (  plateau.presenceDesintegrateur(nbr,mbr)==false &&plateau.presenceTrouNoir(nb,mb)==false)  {
          plateau.placerDesintegrateur(nbr,mbr);
      }
     }

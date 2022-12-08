@@ -56,6 +56,12 @@ return -1;
          
     }
 
+    
+    public void viderGrille(Joueur joueur1, Joueur joueur2){
+        
+    } 
+    
+    
     public String afficherGrilleSurConsole() {
         return "PlateauDeJeu{" + "grille=" + grille + '}'; //methode to string
     }
@@ -70,10 +76,15 @@ return -1;
     }
     
     public String lireCouleurDuJeton(int x, int y){ //on lit la couleur du jeton présent dans la case s'il y en a un 
-        grille[x][y].lireCouleurDuJeton();
+        if (grille[x][y].lireCouleurDuJeton() == null){
+            return "vide";
+        }
         return grille[x][y].lireCouleurDuJeton();
     }
     
+    
+        
+     
         
         public boolean colonneGagnantePourCouleur(String couleur){ //renvoie true si la colonne est gagnante
             boolean verif = false;
@@ -115,6 +126,7 @@ return -1;
             }
             return verif;
         }
+        
               
         
         public boolean diagonaleMontanteGagnantePourCouleur(String couleur){ //renvoie true si la diagonale montante est gagnante
@@ -163,7 +175,7 @@ return -1;
         
 
     public void tasserColonne(int j){
-        for (int i=0; i<6; i++){
+        for (int i=0; i<5; i++){
             if ( grille[i][j].presenceJeton()==false && grille[i+1][j].presenceJeton()==true){
                 grille[i][j] = grille[i+1][j];
                 

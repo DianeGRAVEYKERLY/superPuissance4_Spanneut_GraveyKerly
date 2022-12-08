@@ -14,13 +14,14 @@ public class Superpuissance4 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Jeton PremierJeton = new Jeton("rouge");  // TEST POUR VOIR SI JETON MARCHE 
-        PremierJeton.lireCouleur();
+        //Jeton PremierJeton = new Jeton("rouge");  // TEST POUR VOIR SI JETON MARCHE 
+        //PremierJeton.lireCouleur();
         
-        Joueur joueur1= new Joueur("rouge","nathan", reserve<Jeton>,5);
+       //Joueur joueur1= new Joueur("rouge","nathan", reserve<Jeton>,5);
         
-        
-        // TODO code application logic here
+        System.out.println("vous entrez dans le jeu superpuissance 4");
+        Partie une_partie = new Partie();
+        une_partie.lancerPartie();
     }
     
 }
